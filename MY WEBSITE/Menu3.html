@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="C:\Users\Mark Anthony L\MY WEBSITE\mycssdesign.css"> 
+    <link rel="stylesheet" href="C:\Users\Mark Anthony L\MY WEBSITE\bootstrap.css"> 
+    <link rel="stylesheet" href="C:\Users\Mark Anthony L\MY WEBSITE\about.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      
+
+ </head>
+ 
+ <script src="JavaScriptMenu2.js"></script>
+
+<body style="background-color: rgb(151, 151, 151); background-image: url('https://cdnb.artstation.com/p/assets/images/images/029/320/295/original/bogdan-mb0sco-coffeeanim.gif?1601147277'); background-size: cover; background-attachment: fixed;"> 
+
+  <nav class="navbar navbar-transparent navbar-fixed-left">
+    <div class="container-fluid">
+      <div class="navbar-header">
+      </div>
+      <ul class="nav navbar-nav">
+        <li><a href="Index.html" style="color:white"><span class="glyphicon glyphicon-home" ></span> Home</a></li>
+        <li><a href="About.html"style="color:white"> <span class="glyphicon glyphicon-search"></span>         About</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" style="color:white"><span class="glyphicon glyphicon-glass">Menu
+          <span class="caret" ></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="Menu1.html">Ice Blend</a></li>
+            <li><a href="Menu2.html">Float</a></li>
+            <li><a href="Menu3.html">Soft Ice Cream</a></li>
+          </ul> 
+        </li>
+        <li><a href="Contact.html" style="color:white"> <span class="glyphicon glyphicon-earphone "></span>Contact</a></li>
+      </ul>
+  </div>
+  </nav>
+ 
+  <center>
+    <tbody class="Products">
+        <tr >
+            <td colspan="2" >
+                <form name="product_list">
+                    <table border="2" width="70%" style="background-image:url('https://www.jetaatoronto.ca/site/wp-content/uploads/2016/05/IMG_9078-1024x683.jpg'); color:white">
+
+                      <thead>
+                        <tr>
+                          <th>Soft Ice Cream</th>
+                          <th>Medium/Large</th>
+                          <th>Toppings<br />( Whipped- ₱15.00 | Redbean- ₱20.00 )</th>
+                          <th>Quantity</th>
+                          <th>Total</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>
+                            TSUJIRI Soft Ice Cream
+                          </td>
+                          <td>
+                            <label><input type="radio" name="product1_size" value="130.00" onclick="computeProduct1();" /> 
+                              Matcha (130.00)</label><br />
+
+                            <label><input type="radio" name="product1_size" value="110.00" onclick="computeProduct1();" /> Vanilla (110.00)</label>
+                          </td>
+                          <td>
+                            <label><input type="checkbox" name="product1_kinako" onclick="computeProduct1();" 
+                              /> Kinako</label>
+                            <label><input type="checkbox" name="product1_kuromitsu" onclick="computeProduct1();" /> kuromitsu </label></br>
+                            <label><input type="checkbox" name="product1_genmal" onclick="computeProduct1();" 
+                              /> Genmal</label>
+                            <label><input type="checkbox" name="product1_shiratama" onclick="computeProduct1();" /> Sharitama </label></br>
+                          <label><input type="checkbox" name="product1_redbeanball" onclick="computeProduct1();" /> Read Bean Ball</label>
+                            
+                          </td>
+                          <td>
+                            <input type="number" class="text-qty text-amount" name="product1_qty" onchange="computeProduct1(); computeTotalQty();" min=0 placeholder="0" />
+                          </td>
+                          <td>
+                            <div class="text-amount" id="price">0.00</div>
+                          </td>
+                        </tr>
+                        <!-- End -->
+
+                        <tfoot>
+                          <tr>
+                            <td colspan="3" align="right">GRAND TOTAL</td>
+                            <td><div id="total_qty" style="margin-left: 5px; " class="text-amount" style="color:green"></div></td>
+                            <td><div id="grand_total" class="text-amount" style="color:green" readonly="">0.00</div></td>
+                          </tr>
+                          <tr>
+                            <td colspan="3" align="right" >TENDER</td>
+                            <td align="left"><input type="text" class="text-amount" name="tender" onkeyup="computeChange();" placeholder="0.00" style="color:red" /></td><td></td>
+                          </tr>
+                        
+                          <tr>
+                            <td colspan="3" align="right">CHANGE</td>
+                            <td><div id="change" class="text-amount" style="color:blue" >0.00</div></td>
+                            <td></td>
+                          </tr>
+                  </tfoot>      
+                                             
+     </tbody>
+ </center>
+</body>
+
+</html>

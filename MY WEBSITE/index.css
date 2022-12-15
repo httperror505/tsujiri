@@ -1,0 +1,10 @@
+
+.titlepage {
+    display: block;
+    background-color: rgb(87, 87, 87);
+    align-items: center;
+    height: 120px;
+    margin: 100px;
+    border: 1 solid #ccc;
+    border-radius: 10px 10px 0px 00px;  
+}

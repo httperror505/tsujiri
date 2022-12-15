@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="C:\Users\Mark Anthony L\MY WEBSITE\mycssdesign.css"> 
+    <link rel="stylesheet" href="C:\Users\Mark Anthony L\MY WEBSITE\bootstrap.css"> 
+    <link rel="stylesheet" href="C:\Users\Mark Anthony L\MY WEBSITE\about.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      
+
+ </head>
+ 
+ <script src="JavaScriptMenu1.js"></script>
+
+<body style="background-color: rgb(151, 151, 151); background-image: url('https://cdnb.artstation.com/p/assets/images/images/029/320/295/original/bogdan-mb0sco-coffeeanim.gif?1601147277'); background-size: cover; background-attachment: fixed;"> 
+
+  <nav class="navbar navbar-transparent navbar-fixed-left">
+    <div class="container-fluid">
+      <div class="navbar-header">
+      </div>
+      <ul class="nav navbar-nav">
+        <li><a href="Index.html" style="color:white"><span class="glyphicon glyphicon-home" ></span> Home</a></li>
+        <li><a href="About.html"style="color:white"> <span class="glyphicon glyphicon-search"></span>         About</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" style="color:white"><span class="glyphicon glyphicon-glass">Menu
+          <span class="caret" ></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="Menu1.html">Ice Blend</a></li>
+            <li><a href="Menu2.html">Float</a></li>
+            <li><a href="Menu3.html">Soft Ice Cream</a></li>
+          </ul> 
+        </li>
+        <li><a href="Contact.html" style="color:white"> <span class="glyphicon glyphicon-earphone "></span>Contact</a></li>
+      </ul>
+  </div>
+  </nav>
+ 
+  <center>
+    <tbody class="Products">
+        <tr >
+            <td colspan="2" >
+                <form name="product_list">
+                    <table border="2"  width="70%" style="background-image: url('https://img.restaurantguru.com/r5b6-Tsujiri-Tea-House-dessert-2021-09-1.jpg'); background-size: cover; background-position: 90px; background-position-x: 50px;  color:white"   >
+                      <thead>
+                        <tr>
+                          <th>Ice blended</th>
+                          <th>Medium/Large</th>
+                          <th>Toppings<br />( Whipped- ₱20.00 | Redbean- ₱25.00 )</th>
+                          <th>Quantity</th>
+                          <th>Total Price</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>
+                            TSUJIRI Ice Blended
+                          </td>
+                          <td>
+                            <label><input type="radio" name="product1_size" value="155.00" onclick="computeProduct1();" /> 
+                              Medium (155.00)</label><br />
+
+                            <label><input type="radio" name="product1_size" value="170.00" onclick="computeProduct1();" /> Large (170.00)</label>
+                          </td>
+                          <td>
+                            <label><input type="checkbox" name="product1_whipped" onclick="computeProduct1();" /> Whipped</label><br />
+                            <label><input type="checkbox" name="product1_redbean" onclick="computeProduct1();" /> Red Bean </label>
+                          </td>
+                          <td>
+                            <input type="number" class="text-qty text-amount" name="product1_qty" onchange="computeProduct1(); computeTotalQty();" min=0 placeholder="0" />
+                          </td>
+                          <td>
+                            <div class="text-amount" id="product1_total">0.00</div>
+                          </td>
+                        </tr>
+                        <!-- End -->
+                          
+                        <!-- 2nd Product -->
+                        <tr>
+                            <td>
+                             TSUJIRI Milk
+                            </td>
+                            <td>
+                              <label><input type="radio" name="product2_size" value="170.00" onclick="computeProduct2();" /> Medium (170.00)</label><br />
+                              <label><input type="radio" name="product2_size" value="185.00" onclick="computeProduct2();" /> Large (185.00)</label>
+                            </td>
+                            <td>
+                              <label><input type="checkbox" name="product2_whipped" onclick="computeProduct2();" /> Whipped Cream</label><br />
+                              <label><input type="checkbox" name="product2_redbean" onclick="computeProduct2();" /> Red Bean Sauce</label>
+                            </td>
+                            <td>
+                              <input type="number" class="text-qty text-amount" name="product2_qty" onchange="computeProduct2(); computeTotalQty();" min=0 placeholder="0" />
+                            </td>
+                            <td>
+                              <div class="text-amount" id="product2_total">0.00</div>
+                            </td>
+                          </tr>
+                          <!-- End -->
+
+                          <!-- 3rd Product -->
+                          <tr>
+                            <td>
+                              Houjicha
+                            </td>
+                            <td>
+                              <label><input type="radio" name="product3_size" value="150.00" onclick="computeProduct3();" /> Medium (150.00)</label><br />
+                              <label><input type="radio" name="product3_size" value="165.00" onclick="computeProduct3();" /> Large (165.00)</label>
+                            </td>
+                            <td>
+                              <label><input type="checkbox" name="product3_whipped" onclick="computeProduct3();" /> Whipped Cream</label><br />
+                              <label><input type="checkbox" name="product3_redbean" onclick="computeProduct3();" /> Red Bean Sauce</label>
+                            </td>
+                            <td>
+                              <input type="number" class="text-qty text-amount" name="product3_qty" onchange="computeProduct3(); computeTotalQty();" min=0 placeholder="0" />
+                            </td>
+                            <td>
+                              <div class="text-amount" id="product3_total">0.00</div>
+                            </td>
+                          </tr>
+                          <!-- end  -->
+
+                          <!-- 4th product -->
+                          <tr>
+                            <td>
+                              Houjicha Milk
+                            </td>
+                            <td>
+                              <label><input type="radio" name="product4_size" value="165.00" onclick="computeProduct4();" /> Medium (165.00)</label><br />
+                              <label><input type="radio" name="product4_size" value="180.00" onclick="computeProduct4();" /> Large (180.00)</label>
+                            </td>
+                            <td>
+                              <label><input type="checkbox" name="product4_whipped" onclick="computeProduct4();" /> Whipped Cream</label><br />
+                              <label><input type="checkbox" name="product4_redbean" onclick="computeProduct4();" /> Red Bean Sauce</label>
+                            </td>
+                            <td>
+                              <input type="number" class="text-qty text-amount" name="product4_qty" onchange="computeProduct4(); computeTotalQty();" min=0 placeholder="0" />
+                            </td>
+                            <td>
+                              <div class="text-amount" id="product4_total">0.00</div>
+                            </td>
+                          </tr>
+                          <!-- end -->
+
+                          <!-- 5th product -->
+                          <tr>
+                            <td>
+                             Yuzu Citron
+                            </td>
+                            <td>
+                              <label><input type="radio" name="product5_size" value="165.00" onclick="computeProduct5();" /> Medium (165.00)</label><br />
+                              <label><input type="radio" name="product5_size" value="180.00" onclick="computeProduct5();" /> Large (180.00)</label>
+                            </td>
+                            <td>
+                              <label><input type="checkbox" name="product5_whipped" onclick="computeProduct5();" /> Whipped Cream</label><br />
+                              <label><input type="checkbox" name="product5_redbean" onclick="computeProduct5();" /> Red Bean Sauce</label>
+                            </td>
+                            <td>
+                              <input type="number" class="text-qty text-amount" name="product5_qty" onchange="computeProduct5(); computeTotalQty();" min=0 placeholder="0" />
+                            </td>
+                            <td>
+                              <div class="text-amount" id="product5_total">0.00</div>
+                            </td>
+                          </tr>
+                          <!-- end -->
+
+                          <!-- 6th product -->
+                          <tr>
+                            <td>
+                              Red Bean
+                            </td>
+                            <td>
+                              <label><input type="radio" name="product6_size" value="160.00" onclick="computeProduct6();" /> Medium (160.00)</label><br />
+                              <label><input type="radio" name="product6_size" value="175.00" onclick="computeProduct6();" /> Large (175.00)</label>
+                            </td>
+                            <td>
+                              <label><input type="checkbox" name="product6_whipped" onclick="computeProduct6();" /> Whipped Cream</label><br />
+                              <label><input type="checkbox" name="product6_redbean" onclick="computeProduct6();" /> Red Bean Sauce</label>
+                            </td>
+                            <td>
+                              <input type="number" class="text-qty text-amount" name="product6_qty" onchange="computeProduct6(); computeTotalQty();" min=0 placeholder="0" />
+                            </td>
+                            <td>
+                              <div class="text-amount" id="product6_total">0.00</div>
+                            </td>
+                          </tr>
+                          <!-- end -->
+
+                          <!-- 7th product -->
+                          <tr>
+                            <td>
+                              Chocolate
+                            </td>
+                            <td>
+                              <label><input type="radio" name="product7_size" value="160.00" onclick="computeProduct7();" /> Medium (160.00)</label><br />
+                              <label><input type="radio" name="product7_size" value="175.00" onclick="computeProduct7();" /> Large (175.00)</label>
+                            </td>
+                            <td>
+                              <label><input type="checkbox" name="product7_whipped" onclick="computeProduct7();" /> Whipped Cream</label><br />
+                              <label><input type="checkbox" name="product7_redbean" onclick="computeProduct7();" /> Red Bean Sauce</label>
+                            </td>
+                            <td>
+                              <input type="number" class="text-qty text-amount" name="product7_qty" onchange="computeProduct7(); computeTotalQty();" min=0 placeholder="0" />
+                            </td>
+                            <td>
+                              <div class="text-amount" id="product7_total">0.00</div>
+                            </td>
+                          </tr>
+                          <!-- end -->
+
+                          
+                          <!-- footer -->
+                     
+                        <tfoot>
+                          <tr>
+                            <td colspan="3" align="right">GRAND TOTAL</td>
+                            <td><div id="total_qty" style="margin-left: 5px; " class="text-amount" style="color:green"></div></td>
+                            <td><div id="grand_total" class="text-amount" style="color:green" readonly="">0.00</div></td>
+                          </tr>
+                          <tr>
+                            <td colspan="3" align="right" >TENDER</td>
+                            <td align="left"><input type="text" class="text-amount" name="tender" onkeyup="computeChange();" placeholder="0.00" style="color:red" /></td><td></td>
+                          </tr>
+                        
+                          <tr>
+                            <td colspan="3" align="right">CHANGE</td>
+                            <td><div id="change" class="text-amount" style="color:blue" >0.00</div></td>
+                            <td></td>
+                          </tr>
+                          </tfoot>                      
+     </tbody>
+ </center>
+</body>
+</html>
